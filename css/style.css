@@ -1,0 +1,410 @@
+/* Resetowanie marginesu, paddingu i modelu pudełkowego dla wszystkich elementów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ustawienie czcionki dla całej strony */
+body {
+    font-family: Roboto, Arial;
+    z-index: 1;
+}
+
+/* Nagłówek */
+.heading {
+    font-family: Oregano, Roboto, Arial; /* Ustawienie czcionki dla nagłówka */
+    height: 70px; /* Ustawienie wysokości na 70 pikseli */
+    margin-top: 0px; /* Przesunięcie górnego marginesu o 10 pikseli do góry */
+    margin-left: auto; /* Przesunięcie lewego marginesu o 10 pikseli w lewo */
+    margin-right: auto; /* Przesunięcie prawego marginesu o 10 pikseli w prawo */
+    padding-top: 10px; /* Dodanie 10 pikseli wewnętrznego marginesu na górę */
+    padding-bottom: 10px; /* Dodanie 10 pikseli wewnętrznego marginesu na dół */
+    background-color: rgba(0, 66, 54, 0.85); /* Ustawienie koloru tła w formacie RGBA */
+    display: flex; /* Ustawienie kontenera nagłówka jako flexbox */
+    flex-direction: row; /* Ustawienie układu elementów w rzędzie */
+    justify-content: space-between; /* Wyrównanie elementów do krańców kontenera */
+}
+
+
+/* Sekcje lewej, środkowej i prawej części nagłówka */
+.left-section, .middle-section, .right-section {
+    flex-basis: 33.33%; /* Ustawienie szerokości sekcji na 33.33% szerokości kontenera */
+}
+
+/* Styl sekcji lewej */
+.left-section {
+    font-size: 3vw; /* Zmiana rozmiaru czcionki na 3% szerokości widoku */
+    color: #db8d37; /* Zmiana koloru tekstu na #db8d37 */
+    margin-left: 20px; /* Dodanie 20 pikseli lewego marginesu */
+    display: flex; /* Ustawienie kontenera nagłówka jako flexbox */
+    justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+    align-items: center; /* Wyśrodkowanie zawartości w pionie */
+    text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+}
+
+/* Media queries dla mniejszych ekranów - zmiana rozmiaru czcionki dla sekcji lewej i prawej */
+@media (max-width: 600px) {
+    .left-section,
+    .right-section {
+        font-size: 20px; /* Zmiana rozmiaru czcionki na 16px */
+        justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+        align-items: center; /* Wyśrodkowanie zawartości w pionie */
+        text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+        margin-left: auto; /* Automatyczne wycentrowanie marginesu lewego */
+        margin-right: auto; /* Automatyczne wycentrowanie marginesu prawego */
+    }
+}
+
+/* Styl sekcji środkowej */
+.middle-section {
+    display: flex; /* Ustawienie kontenera nagłówka jako flexbox */
+    justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+    align-items: center; /* Wyśrodkowanie zawartości w pionie */
+}
+
+/* Logo */
+.logo {
+    height: 100%; /* Ustawienie wysokości na 100% kontenera */
+    transform: rotate(30deg); /* Obrót o 30 stopni */
+}
+
+/* Media queries dla mniejszych ekranów - ukrycie sekcji środkowej */
+@media (max-width: 600px) {
+    .middle-section {
+        display: none; /* Ukrycie sekcji na mniejszych ekranach */
+    }
+}
+
+/* Styl sekcji prawej */
+.right-section {
+    font-size: 2vw; /* Zmiana rozmiaru czcionki na 2% szerokości widoku */
+    color: #db8d37; /* Zmiana koloru tekstu na #db8d37 */
+    margin-right: 20px; /* Dodanie 20 pikseli prawego marginesu */
+    display: flex; /* Ustawienie kontenera nagłówka jako flexbox */
+    justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+    align-items: center; /* Wyśrodkowanie zawartości w pionie */
+    text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+}
+
+/* Styl przycisków Instagram i Facebook */
+.button-instagram,
+.button-fb {
+    background-color: transparent; /* Przezroczyste tło */
+    border: none; /* Brak obramowania */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+}
+
+/* Styl ikony Instagram */
+.social-media-instagram {
+    height: 30px; /* Ustawienie wysokości na 30 pikseli */
+}
+
+/* Styl ikony Facebook */
+.social-media-fb {
+    height: 30px; /* Ustawienie wysokości na 30 pikseli */
+}
+
+/* Pasek przesuwający się */
+.moving-bar {
+    font-family: Readex Pro;
+    font-size: 20px; /* Zmiana rozmiaru czcionki na 18px */
+    margin-left: auto; /* Przesunięcie lewego marginesu o 10 pikseli w lewo */
+    margin-right: auto; /* Przesunięcie prawego marginesu o 10 pikseli w prawo */
+    color: #db8d37; /* Zmiana koloru tekstu na #db8d37 */
+    background-color: rgba(0, 66, 54, 0.85); /* Ustawienie koloru tła w formacie RGBA */
+    position: sticky; /* Ustawienie pozycji przyczepienia na "sticky" */
+    top: 5px; /* Ustawienie pozycji górnej na 0 */
+    margin-top: 0px; /* Dodanie 0 pikseli górnego marginesu */
+    z-index: 10; /* Ustawienie wartości z-index na wysoki poziom */
+    display: flex; /* Ustawienie kontenera nagłówka jako flexbox */
+    align-items: center; /* Wyśrodkowanie zawartości w pionie */
+    justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+    text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+}
+
+/* Styl sekcji środkowej */
+.middle {    
+  margin-top: 20px;    
+  display: flex; /* Ustawienie kontenera nagłówka jako flexbox */
+  justify-content: space-around; /* Wyrównanie elementów do krańców kontenera */
+  align-items: center; /* Wyśrodkowanie zawartości w pionie */
+  text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+  align-self: stretch; /* Dopasowanie szerokości do rodzica */
+}
+
+/* Styl zdjęcia psa sekcja środkowa */
+.pies1 {
+  margin-right: 5px;
+  flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+  max-width: 50%; /* Maksymalna szerokość wynosząca 50% szerokości kontenera */
+  height: auto; /* Automatyczne dopasowanie wysokości do proporcji obrazu */
+  align-self: flex-start; /* Przyklejanie do górnej krawędzi */ 
+  border-radius: 40px; /* Dodanie zaokrąglenia rogów na 40 pikseli */
+}
+
+/* Styl opisu sekcja środkowa */
+.aboutus {
+  font-family: Readex Pro;
+  margin-left: 5px; /* Dodanie 5 pikseli lewego marginesu */
+  flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+  max-width: 600px; /* Maksymalna szerokość wynosząca 600 pikseli */
+  height: auto; /* Automatyczne dopasowanie wysokości do proporcji obrazu */
+  max-height: 1200px; /* Maksymalna wysokość wynosząca 1200 pikseli */
+  align-self: flex-start; /* Przyklejanie do górnej krawędzi */
+}
+
+/* Styl nagłówka sekcja środkowa */
+.pasja {
+  font-family: Oregano;
+  font-size: 40px; /* Zmiana rozmiaru czcionki na 40 pikseli */
+}
+
+/* Media queries dla mniejszych ekranów */  
+  @media (max-width: 600px) {
+    .middle {
+      flex-direction: column; /* Układ w kolumnie dla mniejszych ekranów */
+      margin: 0; /* Usunięcie marginesu */
+    }
+  
+    .pies1 {
+      flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+      max-width: none; /* Usunięcie maksymalnej szerokości */
+      align-self: stretch; /* Rozciągnięcie na całą szerokość kontenera */
+      border-radius: 0; /* Usunięcie zaokrąglenia */
+    }
+  
+    .aboutus {
+      flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+      max-width: none; /* Usunięcie maksymalnej szerokości */
+      align-self: stretch; /* Rozciągnięcie na całą szerokość kontenera */
+    }
+  }
+  /* Styl zdjęcia loga fci sekcja środkowa */
+  .fci-logo {
+    position: relative; /* Pozycja względna - zachowuje się względem oryginalnego miejsca w dokumencie */
+    top: 0; /* Przesunięcie wertykalne o 0 pikseli (bez przesunięcia) */
+    left: 0; /* Przesunięcie poziome o 0 pikseli (bez przesunięcia) */
+    width: 100%; /* Szerokość wynosząca 100% szerokości rodzica */
+    height: auto; /* Automatyczne dopasowanie wysokości do proporcji obrazu */
+}
+/* Styl nagłówka rozwinięcie sekcja środkowa */
+.middle-section-title {
+    margin-top: 20px; /* Dodanie 20 pikseli górnego marginesu */
+    font-family: Oregano;
+    font-size: 40px; /* Zmiana rozmiaru czcionki na 40 pikseli */
+    flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+    max-width: 100%; /* Zwiększenie maksymalnej szerokości na całą szerokość kontenera */
+    height: auto; /* Automatyczne dopasowanie wysokości do proporcji obrazu */
+    align-items: center; /* Wyśrodkowanie zawartości w pionie */
+    justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+    text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+}
+/* Styl nagłówka rozwinięcie sekcja środkowa */
+.middle-section-2 {
+    margin-top: 20px; /* Dodanie 20 pikseli górnego marginesu */
+    font-family: Readex Pro;   
+    display: flex; /* Ustawienie kontenera nagłówka jako flexbox */
+    justify-content: space-around; /* Wyrównanie elementów do krańców kontenera */
+    align-items: center; /* Wyśrodkowanie zawartości w pionie */
+    text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+    align-self: stretch; /* Dopasowanie szerokości do rodzica */
+}
+
+
+.middle-left,
+.middle-right {
+    flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+    max-width: 50%; /* Maksymalna szerokość wynosząca 50% szerokości kontenera */
+    height: auto; /* Automatyczne dopasowanie wysokości do proporcji obrazu */
+}
+
+.middle-left-1,
+.middle-left-2,
+.middle-left-3 {
+    margin-right: 10px; /* Margines prawy wynoszący 10 pikseli */
+    flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+    display: flex; /* Ustawienie kontenera jako flexbox */
+}
+
+.middle-right-1,
+.middle-right-2,
+.middle-right-3 {
+    margin-left: 10px; /* Margines lewy wynoszący 10 pikseli */
+    flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+    display: flex; /* Ustawienie kontenera jako flexbox */
+}
+
+
+.middle-left-1-1,
+.middle-left-2-1,
+.middle-left-3-1,
+.middle-right-1-2,
+.middle-right-2-2,
+.middle-right-3-2 {
+    flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+    flex-basis: 33.33%; /* 1/3 dostępnej powierzchni */
+    height: auto; /* Automatyczne dopasowanie wysokości do proporcji obrazu */
+}
+
+.middle-left-1-2,
+.middle-left-2-2,
+.middle-left-3-2,
+.middle-right-1-1,
+.middle-right-2-1,
+.middle-right-3-1 {
+    margin-top: 20px; /* Margines górny wynoszący 20 pikseli */
+    font-size: 16px; /* Rozmiar czcionki wynoszący 16 pikseli */
+    flex: 2; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+    flex-basis: 66.67%; /* 2/3 dostępnej powierzchni */
+}
+
+.logo-2,
+.logo-2-1 {
+    width: 50px; /* Szerokość wynosząca 50 pikseli */
+}
+
+
+@media (max-width: 600px) {
+  .middle-section-2 {
+    flex-direction: column; /* Układ w kolumnie dla mniejszych ekranów */
+    margin: 0; /* Usunięcie marginesu */
+  }
+
+  .middle-left,
+  .middle-right {
+    margin-top: 30px; /* Margines górny wynoszący 30 pikseli */
+    flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+    max-width: none; /* Usunięcie maksymalnej szerokości */
+    align-self: stretch; /* Rozciągnięcie na całą szerokość kontenera */
+  }
+}
+
+
+.follow {
+  margin-top: 50px; /* Margines górny wynoszący 50 pikseli */
+  font-family: Oregano;
+  font-size: 30px; /* Rozmiar czcionki wynoszący 30 pikseli */
+}
+
+.follow-section {
+  margin-top: 20px; /* Margines górny wynoszący 20 pikseli */
+  display: flex; /* Ustawienie kontenera jako flexbox */
+  justify-content: space-around; /* Wyrównanie elementów do krańców kontenera */
+  align-items: center; /* Wyśrodkowanie zawartości w pionie */
+  text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+  align-self: stretch; /* Dopasowanie szerokości do rodzica */
+}
+
+.follow-left,
+.follow-right {
+  flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+  max-width: 50%; /* Maksymalna szerokość wynosząca 50% szerokości kontenera */
+  height: auto; /* Automatyczne dopasowanie wysokości do proporcji obrazu */
+}
+
+.follow-button-instagram,
+.follow-button-fb {
+  background-color: transparent; /* Przezroczyste tło */
+  border: none; /* Brak obramowania */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+}
+
+
+/* Styl ikony Instagram */
+.follow-instagram,
+.follow-fb {
+    height: 50px; /* Ustawienie wysokości na 50 pikseli */
+}
+
+.gallery-title {
+  margin-top: 50px; /* Margines górny wynoszący 50 pikseli */
+  font-family: Oregano;
+  font-size: 26px; /* Rozmiar czcionki wynoszący 26 pikseli */
+  justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+  align-items: center; /* Wyśrodkowanie zawartości w pionie */
+  text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+}
+
+.gallery {
+  margin-top: 20px; /* Margines górny wynoszący 20 pikseli */
+  display: flex; /* Ustawienie kontenera jako flexbox */
+  max-width: 1900px; /* Maksymalna szerokość wynosząca 1900 pikseli */
+  width: 100%; /* Szerokość wynosząca 100% szerokości rodzica */
+  flex-wrap: wrap; /* Zawijanie elementów w nową linię w przypadku braku miejsca */
+  justify-content: center; /* Wyśrodkowanie elementów w poziomie */
+}
+
+.gallery-img {
+  width: 350px; /* Szerokość wynosząca 350 pikseli */
+  height: 250px; /* Wysokość wynosząca 250 pikseli */
+  object-fit: cover; /* Dopasowanie obrazu do wymiarów zachowując proporcje */
+  object-position: bottom; /* Pozycja obrazu na dole */
+  padding: 5px; /* Wewnętrzny margines wynoszący 5 pikseli */
+}
+
+.gallery-img:hover {
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  opacity: 0.5; /* Przezroczystość wynosząca 0.5 (połowa pełnej wartości) */
+  transition: 0.5s; /* Płynne przejście animacji trwające 0.5 sekundy */
+  transform: scale(1.1); /* Skalowanie obrazu o 10% większe od pierwotnej wielkości */
+}
+
+@media (max-width: 600px) {
+  .gallery-img {
+    flex: 1; /* Elastyczne dopasowanie szerokości w stosunku do innych elementów */
+    max-width: none; /* Usunięcie maksymalnej szerokości */
+    align-self: stretch; /* Rozciągnięcie na całą szerokość kontenera */
+    padding-top: 5px; /* Wewnętrzny margines górny wynoszący 5 pikseli */
+  }
+}
+
+
+.end-title {
+  margin-top: 50px; /* Margines górny wynoszący 50 pikseli */
+  font-family: Oregano;
+  font-size: 30px; /* Rozmiar czcionki wynoszący 30 pikseli */
+  justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+  align-items: center; /* Wyśrodkowanie zawartości w pionie */
+  text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+}
+
+.end-contact {
+  margin-top: 10px; /* Margines górny wynoszący 10 pikseli */
+  display: flex; /* Ustawienie kontenera jako flexbox */
+  justify-content: space-around; /* Wyrównanie elementów do krańców kontenera */
+  align-items: center; /* Wyśrodkowanie zawartości w pionie */
+  text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+  align-self: stretch; /* Dopasowanie szerokości do rodzica */
+}
+
+.contact-left,
+.contact-right {
+  font-family: Oregano; /* Czcionka o nazwie "Oregano" */
+  font-size: 30px; /* Rozmiar czcionki wynoszący 30 pikseli */
+}
+
+
+@media (max-width: 600px) {
+  .end-contact {    
+    flex-direction: column; /* Układ w kolumnie dla mniejszych ekranów */
+    margin: 10px; /* Margines wynoszący 10 pikseli */
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-left,
+  .contact-right {
+    margin: 10px; /* Margines wynoszący 10 pikseli */
+  }
+}
+
+.stopka {
+  font-family: Readex Pro; /* Czcionka o nazwie "Readex Pro" */
+  font-size: 14px; /* Rozmiar czcionki wynoszący 14 pikseli */
+  margin-top: 100px; /* Margines górny wynoszący 100 pikseli */
+  margin-bottom: 50px; /* Margines dolny wynoszący 50 pikseli */
+  align-items: center; /* Wyśrodkowanie zawartości w pionie */
+  text-align: center; /* Wyśrodkowanie tekstu wewnątrz sekcji */
+  align-self: stretch; /* Dopasowanie szerokości do rodzica */
+}
